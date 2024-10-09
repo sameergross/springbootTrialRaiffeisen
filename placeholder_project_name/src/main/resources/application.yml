@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: placeholder_name
+
+  security:
+    user:
+      name: sameer
+      password: sameer
