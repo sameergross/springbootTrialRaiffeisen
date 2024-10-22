@@ -1,8 +1,18 @@
 spring:
-  application:
-    name: placeholder_name
+  datasource:
+    url: jdbc:h2:file:C:/Users/sameer/testdb  # Corrected file path for Windows
+    driver-class-name: org.h2.Driver  # Changed to kebab-case
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update  # Automatically create/update the schema
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true  # Enable H2 console for testing/debugging
 
   security:
     user:
       name: sameer
-      password: sameer
+      password: sameer  # Credentials for Spring Security
